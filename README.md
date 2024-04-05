@@ -14,13 +14,13 @@
 - [x] Creamos componente Header (común a todas las vistas)
 - [x] Creamos componente Avatar con nombre de usuario e imagen y lo cargamos en header
 ## useContext
-- [] Creamos contexto global para toda la aplicación
+- [x] Creamos contexto global para toda la aplicación
     - Creamos componente `GlobalContext` con **createContext**
     - Creamos contexto `globalContext`y proveedor `GlobalContextProvider`
     - Envolvemos toda nuestra aplicación con el proveedor
     - Creamos estados, variables, etc en contexto y las importamos en el componente que las necesitemos (con **useContext**)
-- [] Usamos contexto para el componente Avatar
-- [] Actualizamos vista Registro para capturar datos de entrada
+- [x] Usamos contexto para el componente Avatar
+- [] Actualizamos vista Login para capturar datos de entrada
   - Capturamos datos en estado 
   - Detectamos submit y iniciamos sesión: 
     - actualizamos **user** de contexto global
