@@ -2,10 +2,17 @@ import { Link } from "react-router-dom";
 import { Avatar } from "./Avatar";
 import { useContext } from "react";
 import { GlobalContext } from "../context/GlobalContext";
+import { useNavigate } from "react-router-dom";
 
 export function Header() {
 
-  const { usuario } = useContext(GlobalContext)
+  function controladorLogout(){
+    setUsuario({})
+    navigate('/login')
+  }
+
+  const navigate = useNavigate()
+  const { usuario, setUsuario } = useContext(GlobalContext)
 
   return (
     <div className="flex justify-between p-3 bg-slate-100 shadow items-center">
@@ -20,6 +27,9 @@ export function Header() {
           </li>
           <li>
             <Link to="/login">LOGIN</Link>
+          </li>
+          <li>
+            <button onClick={controladorLogout}>Logout</button>
           </li>
         </ul>
       </div>

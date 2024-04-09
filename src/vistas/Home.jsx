@@ -1,15 +1,16 @@
 import { useContext } from "react"
 import { GlobalContext } from "../context/GlobalContext"
+import { Tiempo } from "../componentes/Tiempo"
 
 
 export function Home() {
 
-  const { colorFondo } = useContext(GlobalContext)
+  const { ciudad, setCiudad } = useContext(GlobalContext)
 
   return (
     <div>
       <h1>Vista Home</h1>
-      {colorFondo}
+      <Tiempo/>
     </div>
     
   )

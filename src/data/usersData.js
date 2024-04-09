@@ -6,7 +6,7 @@ export const usersData = [
     password: '123456'
   },{
     email: 'admin@example.com',
-    imagen: 'https://img.freepik.com/psd-gratis/ilustracion-3d-avatar-o-perfil-humano_23-2150671142.jpg',
+    imagen: 'https://static.vecteezy.com/system/resources/thumbnails/001/993/889/small/beautiful-latin-woman-avatar-character-icon-free-vector.jpg',
     password: 'admin'
   },
 

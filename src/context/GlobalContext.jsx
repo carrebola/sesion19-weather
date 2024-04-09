@@ -8,16 +8,22 @@ export const GlobalContext = createContext()
 
 export function GlobalContextProvider({ children }) {
 
-  const colorFondo = 'bg-slate-100'
-
   const [usuario, setUsuario] = useState({
-    email: '',
-    password: ''
+    email: 'default',
+    password: '',
+    imagen: 'https://static.vecteezy.com/system/resources/previews/009/292/244/original/default-avatar-icon-of-social-media-user-vector.jpg'
   })
+
+  const [ciudad, setCiudad] = useState('Badalona')
+  const [latitud, setLatitud] = useState('0')
+  const [longitud, setLongitud] = useState('0')
 
   return (
     <GlobalContext.Provider value={{
-      usuario, setUsuario
+      usuario, setUsuario,
+      ciudad, setCiudad,
+      latitud, setLatitud,
+      longitud, setLongitud
     }}>
       {children}
     </GlobalContext.Provider>

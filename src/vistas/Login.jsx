@@ -1,14 +1,17 @@
 import { useContext } from "react"
 import { GlobalContext } from "../context/GlobalContext"
 import { useState } from "react"
-
+import { useNavigate } from "react-router-dom"
 import { usersData } from "../data/usersData"
+
+
 export function Login() {
 
+  const navigate = useNavigate()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
-  const {user, setUser} = useContext(GlobalContext)
+  const {usuario, setUsuario} = useContext(GlobalContext)
   // const {  } = useContext(GlobalContext)
 
   function controladorEmail(e) {
@@ -19,15 +22,21 @@ export function Login() {
     setPassword(e.target.value)
     console.log(password);
   }
+
   function controladorSubmit(e) {
     e.preventDefault()
-    console.log('submit');
+    // Busco el index del elemento de la bd (array usersData) que coincida con el usuario introducido en el input 
     const index = usersData.findIndex((item)=> item.email == email)
     console.log('index : ', index );
-    if(usersData[index].password == password){
-      console.log('hola ', usersData[index].email);
-
-      setUser(usersData[index])
+    if(usersData[index]?.password == password){
+      console.log('hola ', usersData[index]);
+      const usuarioLogueado = {
+        email: usersData[index].email,
+        imagen: usersData[index].imagen
+      }
+      setUsuario(usuarioLogueado)
+      // navegamos a la vista home
+      navigate('/')
 
     }else{
       alert('Error en el inicio de sesión')
