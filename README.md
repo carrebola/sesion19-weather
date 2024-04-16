@@ -26,3 +26,20 @@
     - actualizamos **usuario** de contexto global
     - navegamos (usando **useNavigate** de react-router-dom) a la página home
 
+## Supabase
+- [x] Creamos proyecto supabase
+- [x] Creamos conexión supabase en nuestro proyecto
+- [x] Creamos tabla `usersdata` en supabase y le eliminamos los permisos
+- [x] Leermos y pintamos en vista `usuarios`los datos de la tabla `usersData`  usando la api de supabase.
+- [x] Actualizamos tabla con campos email y userid (foraneos de la tabla privada `users` de 'auth')
+- [x] Creamos la vista registro
+- [ ] Creamos la lógica para el 'registro' con supabase
+- [ ] Creamos la lógica del lógin con supabase
+- [ ] Actualizamos permisos de las tablas
+- [ ] Creamos tabla `productos`y montamos un CRUD
+  - [ ] Crear producto
+  - [ ] Leer detalle producto
+  - [ ] Actualizar producto
+  - [ ] Borrar producto
+
+## Libreria de componentes shadcnUI

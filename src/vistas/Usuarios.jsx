@@ -9,12 +9,14 @@ export function Usuarios() {
   useEffect(() => {
 
     async function leerTodos() {
-      let { data: usuarios, error } = await supabase
-        .from('usuarios')
+
+      let { data: perfiles, error } = await supabase
+        .from('perfiles')
         .select('*')
 
-      setData(usuarios)
-      console.log('usuarios', usuarios);
+
+      setData(perfiles)
+      console.log('perfiles', perfiles);
     }
     leerTodos()
 
