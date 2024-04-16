@@ -26,6 +26,9 @@ export function Header() {
             <Link to="/about">About</Link>
           </li>
           <li>
+            <Link to="/usuarios">Usuarios</Link>
+          </li>
+          <li>
             <Link to="/login">LOGIN</Link>
           </li>
           <li>

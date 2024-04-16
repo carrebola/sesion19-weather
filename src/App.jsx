@@ -5,6 +5,7 @@ import { Home } from './vistas/Home'
 import { Header } from './componentes/Header'
 import { GlobalContextProvider } from './context/GlobalContext'
 import { Login } from './vistas/Login'
+import { Usuarios } from './vistas/Usuarios'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/usuarios" element={<Usuarios />}/>
         </Routes>
       </div>
 
