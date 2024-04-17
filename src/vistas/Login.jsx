@@ -1,4 +1,4 @@
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import { GlobalContext } from "../context/GlobalContext"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
@@ -7,6 +7,7 @@ import { supabase } from "../supabase/supabase"
 
 export function Login() {
 
+
   const navigate = useNavigate()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -14,9 +15,13 @@ export function Login() {
   const { usuario, setUsuario } = useContext(GlobalContext)
   // const {  } = useContext(GlobalContext)
 
+  useEffect(() => {
+    console.log('email desde useEffect', email);
+  }, [email])
+
   function controladorEmail(e) {
     setEmail(e.target.value)
-    // console.log(email);
+    console.log(email);
   }
   function controladorPassword(e) {
     setPassword(e.target.value)
