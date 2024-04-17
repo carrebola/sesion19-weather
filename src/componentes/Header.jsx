@@ -3,10 +3,27 @@ import { Avatar } from "./Avatar";
 import { useContext } from "react";
 import { GlobalContext } from "../context/GlobalContext";
 import { useNavigate } from "react-router-dom";
+import { supabase } from "../supabase/supabase";
 
 export function Header() {
 
-  function controladorLogout(){
+  function controladorLogout() {
+
+    async function verUsuarioLogueado() {
+
+      const { data: { user } } = await supabase.auth.getUser()
+      console.log('usuario logueado :', user);
+    }
+    verUsuarioLogueado()
+
+    async function logout() {
+
+      let { error } = await supabase.auth.signOut()
+      verUsuarioLogueado()
+    }
+    logout()
+
+    console.log();
     setUsuario({})
     navigate('/login')
   }

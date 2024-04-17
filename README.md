@@ -29,10 +29,10 @@
 ## Supabase
 - [x] Creamos proyecto supabase
 - [x] Creamos conexión supabase en nuestro proyecto
-- [x] Creamos tabla `usersdata` en supabase y le eliminamos los permisos
-- [x] Leermos y pintamos en vista `usuarios`los datos de la tabla `usersData`  usando la api de supabase.
-- [x] Actualizamos tabla con campos email y userid (foraneos de la tabla privada `users` de 'auth')
-- [x] Creamos la vista registro
+- [x] Creamos tabla `perfiles` en supabase y le eliminamos los permisos
+- [x] Leermos y pintamos en vista `usuarios`los datos de la tabla `perfiles`  usando la api de supabase.
+- [ ] Actualizamos tabla con campos email y userid (foraneos de la tabla privada `users` de 'auth')
+- [ ] Creamos la vista registro
 - [ ] Creamos la lógica para el 'registro' con supabase
 - [ ] Creamos la lógica del lógin con supabase
 - [ ] Actualizamos permisos de las tablas

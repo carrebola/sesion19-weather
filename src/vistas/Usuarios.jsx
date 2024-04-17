@@ -16,7 +16,7 @@ export function Usuarios() {
 
 
       setData(perfiles)
-      console.log('perfiles', perfiles);
+      //console.log('perfiles', perfiles);
     }
     leerTodos()
 
